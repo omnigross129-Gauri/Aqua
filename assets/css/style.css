@@ -3731,7 +3731,7 @@ body {
   align-items: center;
   overflow: hidden;
 
-  background: url("assets/images/hero-bg.jpg") center right / cover no-repeat;
+  background: url("assets/images/contact-hero.jpg") center right / cover no-repeat;
   color: #fff;
 }
 
@@ -3765,16 +3765,16 @@ body {
 }
 
 .hero-title-bold {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .hero-title-light {
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.95;
 }
 
 .hero-content p {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.7;
   max-width: 520px;
   margin-bottom: 26px;
@@ -3791,7 +3791,7 @@ body {
 
 /* BREADCRUMB */
 .hero-breadcrumb {
-  font-size: 14px;
+  font-size: 17px;
   opacity: 0.9;
 }
 
@@ -3930,7 +3930,455 @@ body {
     transform: translateX(-50%);
   }
 }
+.contact-section {
+  padding: 70px 8%;
+  background: 
+    url("assets/images/world-map.png") center / cover no-repeat,
+    #f8fafc;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* TOP INFO */
+.contact-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #e0edff;
+  color: #2563eb;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.contact-box span {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.contact-box p {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* TITLE */
+.contact-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 25px;
+  margin-top: 15px;
+}
+
+/* TABS */
+.contact-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 45px;
+}
+
+.contact-tabs button {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: none;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contact-tabs .active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* MAIN CONTENT */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* IMAGE */
+.contact-image img {
+  width: 90%;
+  border-radius: 14px;
+   height: 660px;
+}
+
+/* FORM BASE */
+.contact-form {
+  font-weight: 800;
+  
+}
+
+/* LABELS – VERY BOLD */
+.contact-form label {
+  font-weight: 1500;
+  color: #0f172a;
+}
+
+/* INPUT / SELECT / TEXTAREA TEXT */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  font-weight: 1000;
+  color: #0f172a;
+}
+
+/* PLACEHOLDER – STILL READABLE */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* BUTTON – STRONG CTA */
+.contact-form .submit-btn {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
 
 
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  flex: 1;
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 110px;
+}
+
+/* BUTTON */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-top {
+    flex-direction: column;
+  }
+}
+  
+/* ICON BOX */
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background: #e8f1ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ICON STYLE */
+.info-icon i {
+  font-size: 20px;
+  color: #2563eb;     /* BLUE ICON */
+  font-weight: 700;   /* BOLD LOOK */
+}
+
+/* MAIN TEXT – BOLD */
+.info-text p {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+/* LABEL TEXT */
+.info-text span {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+}
+.contact-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px 7%;
+  background: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ITEM */
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  max-width: 33%;
+}
+
+/* ICON */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: #e8f1ff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon i {
+  font-size: 25px;
+  color: #2563eb;   /* BLUE */
+  font-weight: 700; /* BOLD ICON */
+}
+
+/* TEXT */
+.contact-text span {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.contact-text p {
+  font-size: 15px;
+  font-weight: 850;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-horizontal {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-item {
+    max-width: 100%;
+  }
+}
+
+/* SECTION WRAPPER */
+.contact-header {
+  font-weight: 700;   /* Make everything bold */
+}
+
+/* HEADING */
+.contact-header h2 {
+  font-weight: 800;   /* Extra bold like your image */
+  letter-spacing: -0.3px;
+}
+
+/* TABS */
+.contact-tabs button {
+  font-weight: 700;   /* Bold tab text */
+}
+
+/* ACTIVE TAB */
+.contact-tabs .active {
+  font-weight: 800;   /* Extra bold active tab */
+}
+/* MAKE FORM BIGGER */
+.contact-form {
+  max-width: 720px;          /* BIGGER FORM WIDTH */
+  padding: 48px;             /* More breathing space */
+}
+
+/* INPUT / SELECT / TEXTAREA – TALLER */
+.contact-form input,
+.contact-form select {
+  height: 52px;              /* Taller inputs */
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  min-height: 160px;         /* Bigger message box */
+  font-size: 16px;
+}
+
+/* LABELS – MORE PROMINENT */
+.contact-form label {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* ROW GAP */
+.contact-form .row {
+  gap: 24px;                 /* More space between columns */
+}
+
+/* FIELD SPACING */
+.contact-form .field {
+  margin-bottom: 26px;
+}
+
+/* BUTTON – BIG CTA */
+.contact-form .submit-btn {
+  height: 56px;
+  font-size: 17px;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+#contactForm {
+  display: grid;
+}
+
+.tab-image {
+  transition: opacity 0.3s ease;
+}
+
+.map-section {
+  width: 100%;
+  height: 450px;          /* 👈 adjust height */
+  /* margin-top: 30px; */
+margin-bottom: 15px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;    /* optional */
+}
+
+/* Tabs container */
+.contact-tabs {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Tab buttons */
+.contact-tabs button {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- MOBILE FIX ---------- */
+@media (max-width: 768px) {
+  .contact-tabs {
+    flex-wrap: wrap;              /* 👈 allow wrapping */
+    justify-content: center;      /* center on mobile */
+  }
+
+  .contact-tabs button {
+    flex: 1 1 calc(50% - 12px);   /* 2 tabs per row */
+    text-align: center;
+    white-space: normal;          /* allow text wrap */
+  }
+}
+
+/* ---------- EXTRA SMALL DEVICES ---------- */
+@media (max-width: 420px) {
+  .contact-tabs button {
+    flex: 1 1 100%;               /* 1 tab per row */
+  }
+}
+
+
+
+.hero-banner {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 40vh;
+    background-position: center top;
+  }
+}
+
+.hero-banner {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;   /* vertical center */
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 60, 140, 0.75);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;               /* above overlay */
+  max-width: 650px;
+  margin-left: 6%;          /* pushes content to left */
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 65vh;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
 
 

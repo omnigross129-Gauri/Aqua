@@ -253,6 +253,205 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.innerHTML += slider.innerHTML;
 
   
+  
+ 
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".contact-tabs button");
+    const formSection = document.getElementById("contactForm");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+        // active tab style
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+
+        // show form
+        formSection.style.display = "grid";
+      });
+    });
+  });
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".contact-tabs button");
+    const image = document.querySelector(".contact-image img");
+    const select = document.querySelector("select");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+
+        const text = this.innerText;
+
+        // change dropdown value
+        select.value = text;
+
+        // change image (optional)
+        image.src = `assets/images/${text.toLowerCase().replace(/[^a-z]/g, "")}.webp`;
+      });
+    });
+  });
+
+
+  console.log("Script loaded"); // DEBUG LINE
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const form = document.getElementById("contactForm");
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        alert("Tab clicked: " + this.innerText); // DEBUG ALERT
+
+        // active state
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+
+        // show form
+        form.style.display = "grid";
+      });
+    });
+  });
+
+  
+  
+  function openForm(btn) {
+    // remove active from all tabs
+    document
+      .querySelectorAll(".contact-tabs button")
+      .forEach(b => b.classList.remove("active"));
+
+    // activate clicked tab
+    btn.classList.add("active");
+
+    // show form ONLY on click
+    const form = document.getElementById("contactForm");
+form.style.display = "grid";
+form.style.visibility = "visible";
+form.style.opacity = "1";
+
+  }
+
+  
+  function openForm(btn) {
+    // DEBUG (you should see this)
+    console.log("Tab clicked");
+
+    // show form
+   const form = document.getElementById("contactForm");
+form.style.display = "grid";
+form.style.visibility = "visible";
+form.style.opacity = "1";
+
+
+    // active tab styling
+    document
+      .querySelectorAll(".contact-tabs button")
+      .forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+  }
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const requirementSelect = document.querySelector(
+      ".contact-form select"
+    );
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", function () {
+
+        // remove active from all tabs
+        tabs.forEach(t => t.classList.remove("active"));
+
+        // add active to clicked tab
+        this.classList.add("active");
+
+        // OPTIONAL: change Requirement dropdown value
+        if (requirementSelect) {
+          requirementSelect.value = this.innerText;
+        }
+
+        console.log("Clicked:", this.innerText);
+      });
+    });
+  });
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const image = document.querySelector(".tab-image");
+
+    // map tab text → image file
+    const imageMap = {
+      "General Inquiry": "assets/images/general-inquiry1.webp",
+      "Product/Pricing": "assets/images/product-pricing.webp",
+      "Technical Service": "assets/images/technical-service.webp",
+      "Dealer Partnership": "assets/images/dealer-partnership.webp"
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", function () {
+        // active tab switch
+        tabs.forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
+
+        // change image only
+        const tabText = this.innerText.trim();
+        if (imageMap[tabText]) {
+          image.src = imageMap[tabText];
+        }
+      });
+    });
+  });
+
+  
+ 
+  function changeImage(button, imagePath) {
+    console.log("Clicked:", imagePath); // DEBUG (you MUST see this)
+
+    // change image
+    document.getElementById("contactTabImage").src = imagePath;
+
+    // active tab style
+    document
+      .querySelectorAll(".contact-tabs button")
+      .forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  }
+
+  
+  function changeImage(button, imagePath) {
+    console.log("Clicked:", imagePath);
+
+    // 1. Change image
+    const img = document.getElementById("contactTabImage");
+    if (!img) {
+      console.error("Image with id 'contactTabImage' not found");
+      return;
+    }
+    img.src = imagePath;
+
+    // 2. Active tab styling
+    document
+      .querySelectorAll(".contact-tabs button")
+      .forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+
 
 
 </head>
@@ -22,7 +25,7 @@
     <p>Your Water Safety Starts With a Conversation</p>
 
     <div class="social-icons">
-  <a href="#"><img src="assets/images/logos_facebook.svg"</a>
+  <a href="#"><img src="assets/images/logos_facebook.svg"></a>
   <a href="#"><img src="assets/images/devicon_linkedin.svg" alt="LinkedIn"></a>
   <a href="#"><img src="assets/images/skill-icons_instagram.svg" alt="Instagram"></a>
   <!-- <a href="#"><img src="img/pinterest.svg" alt="Pinterest"></a> -->
@@ -66,7 +69,7 @@
       </div>
     </div>
 
-    <div class="language-selector">
+    <!-- <div class="language-selector">
   <div class="language">
     <img src="https://flagcdn.com/w20/gb.png" alt="English">
     <span>English</span>
@@ -95,7 +98,7 @@
       <span>German</span>
     </li>
   </ul>
-</div>
+</div> -->
 
 
   </div>
@@ -124,19 +127,39 @@
           <button id="closeMenu">&times;</button>
         </li>
 
-        <li><a href="#" class="active">Home</a></li>
-        <li class="has-submenu">
-          <a href="#">About</a>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-dropdown">
+  <a href="#">
+    About
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
 
-          <ul class="submenu">
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Certifications</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </li>
+  <ul class="dropdown">
+    <li><a href="#">Company</a></li>
+    <li><a href="#">Our Team</a></li>
+    <li><a href="#">Certifications</a></li>
+    <li><a href="#">Careers</a></li>
 
-        <li><a href="#">Products</a></li>
+  </ul>
+</li>
+
+         <li class="has-dropdown">
+  <a href="#">
+    Products
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+
+  <ul class="dropdown">
+    <li><a href="#">Water Ionizer</a></li>
+    <li><a href="#">Domestic</a></li>
+    <li><a href="#">Commercial</a></li>
+    <li><a href="#">Industrial</a></li>
+    <li><a href="#">Water Chiller</a></li>
+    <li><a href="#">Water ATM</a></li>
+    <li><a href="#">Water Softner</a></li>
+
+  </ul>
+</li>
         <li><a href="#">Services</a></li>
         <li><a href="#">News & Releases</a></li>
         <li><a href="#">Contact</a></li>
@@ -157,10 +180,10 @@
     </div>
   </nav>
 
-<section class="hero-banner">
+<section class="hero-banner" style="background-image: url('assets/images/contact-hero.jpg');">
   <div class="hero-overlay"></div>
 
-  <div class="hero-content container">
+  <div class="hero-content container-fluid">
     <h1>
       <span class="hero-title-bold">Pure Intelligence.</span><br>
       <span class="hero-title-light">Applied.</span>
@@ -179,6 +202,134 @@
     </div>
   </div>
 </section>
+
+<section class="contact-section" style="
+  min-height: 700px;
+  background-image: url('assets/images/contact-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+">
+
+
+  <!-- Top Contact Info -->
+ <div class="contact-horizontal">
+  <div class="contact-item">
+    <div class="contact-icon">
+      <i class="fa-solid fa-phone"></i>
+    </div>
+    <div class="contact-text">
+      <span>CALL US</span>
+      <p>+1 (800) 571 2030</p>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-icon">
+      <i class="fa-solid fa-envelope"></i>
+    </div>
+    <div class="contact-text">
+      <span>EMAIL US</span>
+      <p>aquaijmd@gmail.com</p>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <div class="contact-icon">
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+    <div class="contact-text">
+      <span>VISIT HQ</span>
+      <p>
+        BG Block MIDC Bhosari, Pune,<br>
+        411061, Maharashtra, India
+      </p>
+    </div>
+  </div>
+</div>
+
+
+  <h2 class="contact-title">Send us a Message</h2>
+
+ <div class="contact-tabs">
+  <button type="button" class="active"
+    onclick="changeImage(this, 'assets/images/general-inquiry.webp')">
+    General Inquiry
+  </button>
+
+  <button type="button"
+    onclick="changeImage(this, 'assets/images/product-pricingg.jpg')">
+    Product/Pricing
+  </button>
+
+  <button type="button"
+    onclick="changeImage(this, 'assets/images/technical-service.webp')">
+    Technical Service
+  </button>
+
+  <button type="button"
+    onclick="changeImage(this, 'assets/images/dealer-partnership.webp')">
+    Dealer Partnership
+  </button>
+</div>
+  <!-- Content -->
+  <div class="contact-content" id="contactForm">
+
+    <!-- Image -->
+    <div class="contact-image">
+      <img src="assets/images/general-inquiry.webp" alt="Support" id="contactTabImage">
+    </div>
+
+
+    <!-- Form -->
+    <form class="contact-form">
+      <div class="row">
+        <div class="field">
+          <label>Full Name *</label>
+          <input type="text" placeholder="e.g. Jane Cooper">
+        </div>
+        <div class="field">
+          <label>Phone Number *</label>
+          <input type="text" placeholder="e.g. +91 00000 00000">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Email</label>
+        <input type="email" placeholder="e.g. jane123@gmail.com">
+      </div>
+
+      <div class="field">
+        <label>Requirement</label>
+        <select>
+          <option>Select Requirement</option>
+          <option>General Inquiry</option>
+          <option>Product Pricing</option>
+          <option>Technical Service</option>
+          <option>Dealer Partnership</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Message</label>
+        <textarea placeholder="How can we help you?"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+    
+  </div>
+</section>
+
+<section class="map-section">
+  <iframe
+    src="https://www.google.com/maps?q=BG%20Block%20MIDC%20Bhosari%20Pune&output=embed"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
+
 
 
 
