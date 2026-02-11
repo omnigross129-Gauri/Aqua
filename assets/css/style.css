@@ -5958,7 +5958,7 @@ body {
   rgba(22,119,255,0.10) 55%,
   rgba(0,180,255,0.06) 100%
 ),
-    url("/Aquaj1/Aquaj1/assets/images/aqua.png");
+    url("../images/aqua.png");
 
   background-size: cover;
   background-position: center;
@@ -6535,4 +6535,26 @@ body {
       .hero p{ font-size: 16px; }
       .heroBtn{ width: 100%; max-width: 360px; }
     }
-  
+  /* ================= DARK (BLUE) CARD ================= */
+.csx-dark{
+  background:#052b58;
+  border-color:#052b58;
+  box-shadow: 0 22px 60px rgba(5,43,88,.20);
+}
+
+/* ✅ FIX: proper professional text contrast */
+.csx-dark h3{
+  color:#ffffff;              /* pure white heading */
+}
+
+.csx-dark p{
+  color: rgba(255,255,255,.85); /* soft white body text */
+}
+
+/* (optional but safe if you ever add spans/links later) */
+.csx-dark span,
+.csx-dark a{
+  color: rgba(255,255,255,.85);
+}
+
+/* =================================================== */
