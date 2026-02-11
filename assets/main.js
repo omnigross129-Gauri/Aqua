@@ -252,6 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Duplicate slides for infinite loop
   slider.innerHTML += slider.innerHTML;
 
+<<<<<<< Updated upstream
   
   
  
@@ -452,6 +453,16 @@ form.style.opacity = "1";
 
 
 
+=======
+  /******************************
+ * LOAD HEADER & FOOTER (React Mount)
+ ******************************/
+document.addEventListener("DOMContentLoaded", () => {
+  loadComponent("navbar", "compontents/navbar.html", initNavbar);
+loadComponent("footer", "compontents/footer.html");
+
+});
+>>>>>>> Stashed changes
 
 
 
