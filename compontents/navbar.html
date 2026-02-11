@@ -46,48 +46,78 @@
 </div>
 
 <!-- NAVBAR -->
-<nav class="aqua-navbar">
-  <div class="nav-inner">
+  <nav class="aqua-navbar">
+    <div class="nav-inner">
 
-    <div class="nav-logo">
-      <img src="assets/images/logo.png" alt="Aqua J1">
+      <!-- LOGO (for mobile like image) -->
+      <!-- LOGO -->
+      <div class="nav-logo">
+        <img src="assets/images/logo.png" alt="Aqua J1">
+
+      </div>
+
+
+      <!-- HAMBURGER -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-menu">
+        <li class="nav-close">
+          <button id="closeMenu">&times;</button>
+        </li>
+
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-dropdown">
+  <a href="about.html">
+    About
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+
+  <ul class="dropdown">
+    <li><a href="#">Company</a></li>
+    <li><a href="#">Our Team</a></li>
+    <li><a href="#">Certifications</a></li>
+    <li><a href="#">Careers</a></li>
+
+  </ul>
+</li>
+
+         <li class="has-dropdown">
+  <a href="#">
+    Products
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+
+  <ul class="dropdown">
+    <li><a href="#">Water Ionizer</a></li>
+    <li><a href="#">Domestic</a></li>
+    <li><a href="#">Commercial</a></li>
+    <li><a href="#">Industrial</a></li>
+    <li><a href="#">Water Chiller</a></li>
+    <li><a href="#">Water ATM</a></li>
+    <li><a href="#">Water Softner</a></li>
+
+  </ul>
+</li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="#">News & Releases</a></li>
+        <li><a href="contact.html">Contact</a></li>
+
+        <!-- underline -->
+        <span class="nav-indicator"></span>
+      </ul>
+
+      <div class="nav-right">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <button class="consult-btn">
+          Free Consulting
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
     </div>
-
-    <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
-    </div>
-
-    <ul class="nav-menu">
-      <li class="nav-close">
-        <button id="closeMenu">&times;</button>
-      </li>
-
-      <li><a href="index.html">Home</a></li>
-
-      <li class="has-submenu">
-        <a href="about.html">About</a>
-        <ul class="submenu">
-          <li><a href="#">Company</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Certifications</a></li>
-          <li><a href="#">Careers</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">News & Releases</a></li>
-      <li><a href="#">Contact</a></li>
-
-      <span class="nav-indicator"></span>
-    </ul>
-
-    <div class="nav-right">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <button class="consult-btn">
-        Free Consulting <i class="fa-solid fa-arrow-right"></i>
-      </button>
-    </div>
-
-  </div>
-</nav>
+  </nav>

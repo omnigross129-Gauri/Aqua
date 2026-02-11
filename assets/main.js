@@ -189,53 +189,78 @@ function initNavbar() {
   });
 }
 
-/******************************
- * LOAD HEADER & FOOTER (React Mount)
- ******************************/
-document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("navbar", "/components/navbar.html", initNavbar);
-  loadComponent("footer", "/components/footer.html");
-});
 
 
-  const selector = document.querySelector(".language");
-  const dropdown = document.querySelector(".language-dropdown");
 
-  selector.addEventListener("click", () => {
-    dropdown.style.display =
-      dropdown.style.display === "block" ? "none" : "block";
-  });
+  // const selector = document.querySelector(".language");
+  // const dropdown = document.querySelector(".language-dropdown");
 
-  dropdown.querySelectorAll("li").forEach(item => {
-    item.addEventListener("click", () => {
-      selector.innerHTML = item.innerHTML + '<i class="fa-solid fa-chevron-down"></i>';
-      dropdown.style.display = "none";
-    });
-  });
+  // selector.addEventListener("click", () => {
+  //   dropdown.style.display =
+  //     dropdown.style.display === "block" ? "none" : "block";
+  // });
 
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".language-selector")) {
-      dropdown.style.display = "none";
-    }
-  });
+  // dropdown.querySelectorAll("li").forEach(item => {
+  //   item.addEventListener("click", () => {
+  //     selector.innerHTML = item.innerHTML + '<i class="fa-solid fa-chevron-down"></i>';
+  //     dropdown.style.display = "none";
+  //   });
+  // });
 
-  document.querySelectorAll(".has-dropdown > a").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      link.parentElement.classList.toggle("open");
-    });
-  });
+  // document.addEventListener("click", (e) => {
+  //   if (!e.target.closest(".language-selector")) {
+  //     dropdown.style.display = "none";
+  //   }
+  // });
+
+  // document.querySelectorAll(".has-dropdown > a").forEach(link => {
+  //   link.addEventListener("click", e => {
+  //     e.preventDefault();
+  //     link.parentElement.classList.toggle("open");
+  //   });
+  // });
 
  
   
+  // const slides = document.querySelectorAll(".hero-container");
+  // let currentSlide = 0;
+  // const slideInterval = 4000; // 4 seconds
+
+  // function showSlide(index) {
+  //   slides.forEach((slide, i) => {
+  //     slide.classList.toggle("active", i === index);
+  //   });
+  // }
+
+  // function nextSlide() {
+  //   currentSlide = (currentSlide + 1) % slides.length;
+  //   showSlide(currentSlide);
+  // }
+
+  // // Start auto slider
+  // setInterval(nextSlide, slideInterval);
+
+
+  // const slider = document.querySelector(".hero-slides");
+
+  // // Duplicate slides for infinite loop
+  // slider.innerHTML += slider.innerHTML;
+
+  document.addEventListener("DOMContentLoaded", function () {
+
   const slides = document.querySelectorAll(".hero-container");
+
+  if (!slides.length) return;
+
   let currentSlide = 0;
-  const slideInterval = 4000; // 4 seconds
+  const slideInterval = 4000;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.classList.toggle("active", i === index);
+      slide.classList.remove("active");
     });
+
+    slides[index].classList.add("active");
   }
 
   function nextSlide() {
@@ -243,16 +268,12 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide);
   }
 
-  // Start auto slider
+  showSlide(currentSlide);
   setInterval(nextSlide, slideInterval);
 
+});
 
-  const slider = document.querySelector(".hero-slides");
 
-  // Duplicate slides for infinite loop
-  slider.innerHTML += slider.innerHTML;
-
-<<<<<<< Updated upstream
   
   
  
@@ -381,65 +402,61 @@ form.style.opacity = "1";
 
 
   document.addEventListener("DOMContentLoaded", function () {
-    const tabs = document.querySelectorAll(".tab-btn");
-    const image = document.querySelector(".tab-image");
 
-    // map tab text → image file
-    const imageMap = {
-      "General Inquiry": "assets/images/general-inquiry1.webp",
-      "Product/Pricing": "assets/images/product-pricing.webp",
-      "Technical Service": "assets/images/technical-service.webp",
-      "Dealer Partnership": "assets/images/dealer-partnership.webp"
-    };
+  const tabs = document.querySelectorAll(".contact-tabs button");
+  const image = document.getElementById("contactTabImage");
 
-    tabs.forEach(tab => {
-      tab.addEventListener("click", function () {
-        // active tab switch
-        tabs.forEach(t => t.classList.remove("active"));
-        this.classList.add("active");
+  const imageMap = {
+    "General Inquiry": "assets/images/general-inquiry.webp",
+    "Product/Pricing": "assets/images/product-pricing.webp",
+    "Technical Service": "assets/images/technical-service.webp",
+    "Dealer Partnership": "assets/images/dealer-partnership.webp"
+  };
 
-        // change image only
-        const tabText = this.innerText.trim();
-        if (imageMap[tabText]) {
-          image.src = imageMap[tabText];
-        }
-      });
+  if (!tabs.length || !image) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+
+      // Remove active
+      tabs.forEach(t => t.classList.remove("active"));
+      this.classList.add("active");
+
+      const text = this.innerText.trim();
+
+      if (imageMap[text]) {
+        image.src = imageMap[text];
+      } else {
+        console.error("Image not found for:", text);
+      }
+
     });
   });
+
+});
+
 
   
  
   function changeImage(button, imagePath) {
-    console.log("Clicked:", imagePath); // DEBUG (you MUST see this)
 
-    // change image
-    document.getElementById("contactTabImage").src = imagePath;
+  const img = document.getElementById("contactTabImage");
 
-    // active tab style
-    document
-      .querySelectorAll(".contact-tabs button")
-      .forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
+  if (!img) {
+    console.error("Image not found");
+    return;
   }
 
-  
-  function changeImage(button, imagePath) {
-    console.log("Clicked:", imagePath);
+  // Change image
+  img.src = imagePath;
 
-    // 1. Change image
-    const img = document.getElementById("contactTabImage");
-    if (!img) {
-      console.error("Image with id 'contactTabImage' not found");
-      return;
-    }
-    img.src = imagePath;
+  // Active tab style
+  document
+    .querySelectorAll(".contact-tabs button")
+    .forEach(btn => btn.classList.remove("active"));
 
-    // 2. Active tab styling
-    document
-      .querySelectorAll(".contact-tabs button")
-      .forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
-  }
+  button.classList.add("active");
+}
 
 
 
@@ -453,7 +470,7 @@ form.style.opacity = "1";
 
 
 
-=======
+
   /******************************
  * LOAD HEADER & FOOTER (React Mount)
  ******************************/
@@ -462,7 +479,6 @@ document.addEventListener("DOMContentLoaded", () => {
 loadComponent("footer", "compontents/footer.html");
 
 });
->>>>>>> Stashed changes
 
 
 
