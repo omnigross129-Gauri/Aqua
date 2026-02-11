@@ -274,12 +274,6 @@ function initNavbar() {
 });
 
 
-<<<<<<< Updated upstream
-=======
-  // Duplicate slides for infinite loop
-  slider.innerHTML += slider.innerHTML;
-
->>>>>>> Stashed changes
   
   
  
