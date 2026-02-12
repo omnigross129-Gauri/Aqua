@@ -1100,16 +1100,6 @@
   color: #333;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: #ffffff;
-}
 
 /* SECTION */
 .tech-section {
@@ -7133,11 +7123,6 @@ margin-bottom: 15px;
   margin: 0 auto;
 }
 
-/* HEADER */
-.ab-head{
-  text-align:center;
-  margin-bottom: 40px;
-}
 
 .ab-title{
   margin: 0 0 12px;
