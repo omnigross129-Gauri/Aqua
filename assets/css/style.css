@@ -63,30 +63,6 @@
 }
 
 
-
-.info-item {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  max-width: 260px;
-}
-
-.info-item i {
-  font-size: 22px;
-  color: #1877f2;
-  margin-top: 4px;
-}
-
-.info-item span {
-  font-size: 13px;
-  color: #777;
-}
-
-.info-item strong {
-  font-size: 14px;
-  color: #000;
-}
-
 .language {
   display: flex;
   align-items: center;
