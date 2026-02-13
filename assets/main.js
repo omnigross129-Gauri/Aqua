@@ -473,16 +473,6 @@ form.style.opacity = "1";
 
 
 
-
-
-
-
-
-
-
-
-
-
   /******************************
  * LOAD HEADER & FOOTER (React Mount)
  ******************************/
@@ -494,5 +484,77 @@ loadComponent("footer", "compontents/footer.html");
 
 
 
+const networkCounters = document.querySelectorAll(".network-counter");
+
+const networkObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      networkCounters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const duration = 2000;
+        const startTime = performance.now();
+
+        function animateCounter(currentTime) {
+          const elapsedTime = currentTime - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const value = Math.floor(progress * target);
+
+          if (counter.innerText.includes("+")) {
+            counter.innerText = value + "+";
+          } else {
+            counter.innerText = value;
+          }
+
+          if (progress < 1) {
+            requestAnimationFrame(animateCounter);
+          }
+        }
+
+        requestAnimationFrame(animateCounter);
+      });
+
+      networkObserver.disconnect(); // run once only
+    }
+  });
+}, { threshold: 0.4 });
+
+networkObserver.observe(document.querySelector(".network-section"));
 
 
+
+
+const counters = document.querySelectorAll(".counter");
+let started = false;
+
+function startCounting() {
+  if (started) return;
+
+  const section = document.querySelector(".stats-section");
+  const sectionTop = section.getBoundingClientRect().top;
+
+  if (sectionTop < window.innerHeight - 100) {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute("data-target");
+      const increment = target / 100;
+
+      let count = 0;
+
+      const updateCounter = () => {
+        count += increment;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count) + "+";
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+
+      updateCounter();
+    });
+
+    started = true;
+  }
+}
+
+window.addEventListener("scroll", startCounting);
