@@ -6094,7 +6094,7 @@ margin-bottom: 15px;
 .pd-page{
   background:#fff;
   padding: 18px 0 70px;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+ 
 }
 
 .pd-wrap{
@@ -6808,7 +6808,7 @@ margin-bottom: 15px;
 }
 
 .nr-kicker{
-  font-size: 12px;
+  font-size: 30px;
   opacity: .9;
   margin-bottom: 10px;
 }
@@ -6824,7 +6824,7 @@ margin-bottom: 15px;
 .nr-hero-sub{
   margin:0 0 18px;
   max-width: 460px;
-  font-size: 13.5px;
+  font-size: 20px;
   line-height: 1.6;
   color: rgba(255,255,255,.86);
 }
@@ -6838,7 +6838,7 @@ margin-bottom: 15px;
   background:#fff;
   color:#1a66ff;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 15px;
   text-decoration:none;
   border: 1px solid rgba(255,255,255,.55);
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
@@ -6856,7 +6856,7 @@ margin-bottom: 15px;
 
 .nr-section-title{
   margin:0 0 16px;
-  font-size: 18px;
+  font-size: 26px;
   font-weight: 900;
   color:#0b1220;
 }
@@ -6908,14 +6908,14 @@ margin-bottom: 15px;
 
 .nr-card-title{
   margin:0 0 8px;
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 900;
   color:#0b1220;
 }
 
 .nr-card-text{
   margin:0 0 10px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.6;
   color:#6b7280;
 }
@@ -6947,8 +6947,9 @@ margin-bottom: 15px;
 }
 
 .nr-author-name{
-  font-size: 10.5px;
-  color:#6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  color:black;
 }
 
 .nr-readmore{
@@ -6956,6 +6957,7 @@ margin-bottom: 15px;
   font-weight: 900;
   color:#1a66ff;
   text-decoration: none;
+  margin-right: 50px;
 }
 .nr-readmore:hover{
   text-decoration: underline;
@@ -6976,7 +6978,7 @@ margin-bottom: 15px;
 
 .nr-newsroom-title{
   margin:0 0 10px;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 900;
   color:#0b1220;
   line-height: 1.1;
@@ -6984,8 +6986,8 @@ margin-bottom: 15px;
 
 .nr-newsroom-sub{
   margin:0 0 18px;
-  font-size: 11.5px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.7;
   color:#4b5563;
   max-width: 300px;
 }
@@ -7002,14 +7004,14 @@ margin-bottom: 15px;
 }
 
 .nr-date{
-  font-size: 10.5px;
+  font-size: 13px;
   color:#111827;
   opacity: .85;
   margin-bottom: 5px;
 }
 
 .nr-headline{
-  font-size: 11.5px;
+  font-size: 15px;
   color:#0b1220;
   font-weight: 800;
 }
@@ -7018,7 +7020,7 @@ margin-bottom: 15px;
 .nr-float{
   position: fixed;
   right: 16px;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   display:flex;
   flex-direction: column;
@@ -7027,18 +7029,21 @@ margin-bottom: 15px;
 }
 
 .nr-float-btn{
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 999px;
   display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
+  font-size: 30px;
   font-weight: 900;
   color:#fff;
   box-shadow: 0 16px 40px rgba(16,24,40,.20);
   transition: transform .18s ease, box-shadow .18s ease;
 }
+
+
 .nr-float-btn:hover{
   transform: translateY(-2px);
   box-shadow: 0 22px 54px rgba(16,24,40,.26);
