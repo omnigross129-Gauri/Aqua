@@ -13,35 +13,7 @@
   <title>Services Page Body</title>
 
   <style>
-    :root{
-      --blue-900:#073a8a;
-      --blue-800:#0a49b3;
-      --blue-700:#0f63d8;
-      --blue:#1677ff;
-
-      --navy:#062b57;
-      --ink:#0b1220;
-      --muted:#5b677a;
-
-      --bg:#ffffff;
-      --soft:#eef4ff;
-      --line:#e5eefc;
-
-      --card:#ffffff;
-      --shadow: 0 18px 40px rgba(16,24,40,.08);
-      --shadow2: 0 22px 60px rgba(16,24,40,.14);
-
-      --radius: 22px;
-      --radius-lg: 28px;
-    }
-
-    *{ box-sizing:border-box; }
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--ink);
-      background: var(--bg);
-    }
+   
 
     /* width like your website */
     .wrap{
@@ -65,7 +37,7 @@
   rgba(22,119,255,0.10) 55%,
   rgba(0,180,255,0.06) 100%
 ),
-    url("/Aquaj1/Aquaj1/assets/images/aqua.png");
+    url("./assets/images/aqua.png");
 
   background-size: cover;
   background-position: center;
@@ -606,8 +578,8 @@
       width: min(520px, 100%);
       border:0;
       border-radius: 14px;
-      background: var(--blue);
-      color:#fff;
+      background: black;
+      color:white;
       font-weight: 900;
       font-size: 18px;
       padding: 16px 18px;
@@ -615,15 +587,8 @@
       box-shadow: 0 18px 50px rgba(22,119,255,.28);
       transition: transform .12s ease, box-shadow .18s ease, background .18s ease;
     }
-    .otpBtn:hover{
-      background:#0f66ff;
-      box-shadow: 0 24px 60px rgba(22,119,255,.34);
-      transform: translateY(-1px);
-    }
-    .otpBtn:active{
-      transform: translateY(0px);
-      box-shadow: 0 18px 50px rgba(22,119,255,.24);
-    }
+    
+    
 
     /* ================= Responsive ================= */
     @media (max-width: 980px){
@@ -643,6 +608,28 @@
       .hero p{ font-size: 16px; }
       .heroBtn{ width: 100%; max-width: 360px; }
     }
+
+    /* ================= DARK (BLUE) CARD ================= */
+.csx-dark{
+  background:#052b58;
+  border-color:#052b58;
+  box-shadow: 0 22px 60px rgba(5,43,88,.20);
+}
+
+/* ✅ FIX: proper professional text contrast */
+.csx-dark h3{
+  color:#ffffff;              /* pure white heading */
+}
+
+.csx-dark p{
+  color: rgba(255,255,255,.85); /* soft white body text */
+}
+
+/* (optional but safe if you ever add spans/links later) */
+.csx-dark span,
+.csx-dark a{
+  color: rgba(255,255,255,.85);
+}
   </style>
 
 
@@ -670,7 +657,7 @@
 <div class="hero-glass">
   <div class="glass-top">
     <div class="glass-item">
-      <img src="assets/images/icons/nanofication.svg" alt="Smart Filtration">
+      <img src="./assets/images/icons/nanofication.svg" alt="Smart Filtration">
       <div>
         <h4>Smart Filtration</h4>
         <p>Autonomous adjustment active.</p>
