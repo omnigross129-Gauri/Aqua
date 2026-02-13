@@ -187,6 +187,18 @@ function initNavbar() {
       }
     });
   });
+
+  // Sticky Header Logic
+  window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".aqua-navbar");
+    if (navbar) {
+      if (window.scrollY > 150) { // Adjust threshold as needed
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  });
 }
 
 
