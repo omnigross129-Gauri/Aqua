@@ -8671,52 +8671,76 @@ textarea {
 /* HEADER SECTION */
 .purity-header {
   display: flex;
-  align-items: flex-start;
-  gap: 60px;              /* space between left & right */
-  margin-bottom: 60px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
 }
 
-/* LEFT SIDE */
+/* LEFT */
+.purity-left {
+  flex: 1;
+}
+
 .purity-tag {
   color: #0b63ff;
   font-weight: 600;
-  font-size: 20px;
-  margin-left: 50px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .purity-title {
-  font-size: 42px;
-  margin-top: 10px;
-   margin-left: 50px;
+  font-size: 48px;
+  line-height: 1.2;
 }
 
 .purity-title span {
   color: #0b63ff;
 }
 
-/* RIGHT SIDE */
-.purity-right {
+/* CENTER ICON */
+.tech-divider-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #1f5fff, #4fa3ff);
+  border-radius: 50%;
   display: flex;
-  align-items: flex-start;
-  gap: 8px;               /* 👈 controls line & paragraph spacing */
-  max-width: 420px;
-  margin-left: 380px;
-  
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 26px;
+  box-shadow: 0 15px 40px rgba(31,95,255,0.25);
+  flex-shrink: 0;
+  margin-right: 60px;
 }
 
+/* RIGHT */
+.purity-right {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  max-width: 480px;
+}
+
+/* FIXED LINE */
 .purity-line {
   width: 3px;
   background: #0b63ff;
-  min-height: 100%;
+  height: 120px;   /* 👈 THIS fixes visibility */
+  border-radius: 10px;
 }
 
+/* TEXT */
 .purity-text {
-  margin: 0;              /* removes default paragraph gap */
+  margin: 0;
   color: #555;
-  line-height: 1.6;
-  font-size: 18px;
-  
+  line-height: 1.7;
+  font-size: 17px;
 }
+
 
 
 .footer-credit {
@@ -8755,15 +8779,3 @@ textarea {
 }
 
 
-.tech-divider-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #1f5fff, #4fa3ff);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 26px;
-  box-shadow: 0 15px 40px rgba(31,95,255,0.25);
-}
