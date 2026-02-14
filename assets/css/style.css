@@ -496,8 +496,8 @@
 }
 
 .icon-box img {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
 }
 
 .stat-card h3 {
@@ -8665,3 +8665,5 @@ textarea {
     padding: 0 15px;         /* small side spacing */
   }
 }
+
+
