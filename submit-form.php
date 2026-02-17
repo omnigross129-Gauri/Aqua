@@ -28,7 +28,7 @@ try {
     $mail->Host       = "smtp.hostinger.com";
     $mail->SMTPAuth   = true;
     $mail->Username   = "my mail";
-    $mail->Password   = "G@ur@v111";
+    $mail->Password   = "my pass";
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = $smtpPort;
 
