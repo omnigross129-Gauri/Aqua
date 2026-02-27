@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZICO COP - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; ZICO COP
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/ZICO COPPER.jpeg"
+              alt="ZICO COP"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO COPPER.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO COPPER.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO COPPER.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO COPPER.jpeg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">ZICO COP</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Smart Digital Display</li>
+              <li>RO + UV + Sediment + Carbon + UF + MTDS + Copper + Pre Filter</li>
+              <li>Purification Capacity: 10-15 Ltr/Hour</li>
+              <li>Storage: 12.0 Ltr</li>
+              <li>Advanced multi-stage purification suitable for varied water inputs</li>
+              <li>Designed for reliable daily domestic usage</li>
+            </ul>
+            <h2 class="pd-title">Rs. 21,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Smart digital display with clear status visibility during operation.</li>
+          <li>RO + UV + UF purification for reduced contaminants and safer water output.</li>
+          <li>Carbon and sediment filtration stages improve taste and remove suspended particles.</li>
+          <li>MTDS control supports adjustment of output water quality as required.</li>
+          <li>Copper enhancement stage for enriched drinking water profile.</li>
+          <li>12-liter storage supports regular family and office consumption needs.</li>
+          <li>Pre-filter compatibility helps improve performance on varying input water quality.</li>
+          <li>Elegant body style with practical design for modern kitchen spaces.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Zico Cop</h2>
+
+      <div class="desc-card">
+        <p>
+          Zico Cop is designed for users who want advanced purification with premium styling. This model combines RO, UV, UF, carbon and sediment filtration with MTDS control and copper enrichment to deliver balanced, safe, and better-tasting drinking water. With a purification capacity of 10-15 liters per hour and 12-liter storage, it is suitable for homes and compact office spaces requiring dependable day-to-day performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

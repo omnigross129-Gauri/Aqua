@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZICO ALKA - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; ZICO ALKA
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/ZICO ALKALINE.jpeg"
+              alt="ZICO ALKA"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO ALKALINE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO ALKALINE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO ALKALINE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ZICO ALKALINE.jpeg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">ZICO ALKA</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Smart Digital Display</li>
+              <li>RO + UV + Sediment + Carbon + UF + MTDS + Alkaline + Pre Filter</li>
+              <li>Purification Capacity: 10-15 Ltr/Hour</li>
+              <li>Storage: 12.0 Ltr</li>
+              <li>Alkaline-enriched output for improved taste profile</li>
+              <li>Suitable for varied household water conditions</li>
+            </ul>
+            <h2 class="pd-title">Rs. 20,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Smart digital display for clear indication of purifier status.</li>
+          <li>RO + UV + UF purification with sediment and carbon pre-treatment stages.</li>
+          <li>MTDS functionality supports output quality adjustment as needed.</li>
+          <li>Alkaline stage helps provide balanced and better-tasting drinking water.</li>
+          <li>12-liter built-in storage supports regular family consumption.</li>
+          <li>Purification capacity of 10-15 Ltr/Hour for steady daily usage.</li>
+          <li>Pre-filter ready design for improved operation across varying input water quality.</li>
+          <li>Modern body styling suited for contemporary kitchen spaces.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Zico Alka</h2>
+
+      <div class="desc-card">
+        <p>
+          Zico Alka is a modern domestic water purifier built to combine strong purification performance with alkaline enhancement. It uses RO, UV, UF, sediment and carbon filtration stages with MTDS control to improve water safety and taste from a wide range of input sources. With 10-15 liters per hour purification capacity and 12-liter storage, the model is suited for families looking for dependable daily drinking water with a premium look.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

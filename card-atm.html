@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CARD ATM - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; ATM &gt; CARD ATM
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/CARD ATM.jpg" alt="CARD ATM" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/CARD ATM.jpg"><img src="assets/images/CARD ATM.jpg" alt="CARD ATM thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/CARD ATM.jpg"><img src="assets/images/CARD ATM.jpg" alt="CARD ATM thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/CARD ATM.jpg"><img src="assets/images/CARD ATM.jpg" alt="CARD ATM thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/CARD ATM.jpg"><img src="assets/images/CARD ATM.jpg" alt="CARD ATM thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="ion-model-title">MODEL: CARD ATM</h1>
+
+          <table class="ion-spec-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Specifications</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Card Mechanism</td><td>RFID Card</td></tr>
+              <tr><td>Cabinet</td><td>ms powder coated body for longer life</td></tr>
+              <tr><td>Battery</td><td>12VDC (optional)</td></tr>
+              <tr><td>Centrifugal Pump</td><td>230V AC 0.5 Hp</td></tr>
+            </tbody>
+          </table>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

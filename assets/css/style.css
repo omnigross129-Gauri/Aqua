@@ -3817,6 +3817,12 @@ body {
   background: #ffffff;
 }
 
+.domestic-products .container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -3849,8 +3855,10 @@ body {
 /* GRID */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 30px;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 /* CARD */
@@ -3923,6 +3931,8 @@ body {
   font-size: 14px;
   cursor: pointer;
   transition: background 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .view-btn:hover {
@@ -3931,6 +3941,12 @@ body {
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
   .product-grid {
     grid-template-columns: 1fr;
   }
@@ -6039,4 +6055,246 @@ body {
   color: #1f2937;
   line-height: 1.7;
   font-size: 16px;
+}
+
+/* CLERO SERIES VARIANTS */
+.clero-variants-row {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.clero-mini {
+  display: grid;
+  grid-template-columns: 56% 44%;
+  gap: 12px;
+  border: 1px solid #e8edf5;
+  border-radius: 8px;
+  background: #fcfdff;
+  overflow: hidden;
+}
+
+.clero-mini .pd-main-img {
+  border: 0;
+  border-radius: 0;
+  padding: 8px;
+  min-height: auto;
+  background: #f7f9fc;
+}
+
+.clero-mini .pd-main-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  display: block;
+}
+
+.clero-mini-body {
+  padding: 14px 14px 12px 2px;
+}
+
+.clero-mini-body .pd-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.clero-mini-body .pd-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.clero-mini-body .pd-features {
+  font-size: 13px;
+  gap: 6px;
+  margin-bottom: 8px;
+  color: #44526b;
+}
+
+.clero-mini-price {
+  margin: 0;
+  color: #0f3a76;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.clero-mini .pd-actions {
+  margin-top: 10px;
+}
+
+.clero-mini .pd-btn {
+  height: 38px;
+  font-size: 14px;
+  padding: 0 14px;
+}
+
+@media (max-width: 900px) {
+  .clero-mini {
+    grid-template-columns: 1fr;
+  }
+
+  .clero-mini .pd-main-img img {
+    height: 230px;
+  }
+
+  .clero-mini-body {
+    padding: 10px 12px 12px;
+  }
+}
+
+/* REPPO/RETTO IONIZER DETAIL LAYOUT */
+.ion-model-title {
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1.05;
+  color: #0b2f60;
+  font-weight: 700;
+}
+
+.ion-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 26px;
+}
+
+.ion-spec-table th,
+.ion-spec-table td {
+  border-bottom: 1px solid #d7dee8;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #111827;
+}
+
+.ion-spec-table th {
+  background: #c7d0d9;
+  color: #111827;
+  font-weight: 700;
+}
+
+.ion-spec-table td {
+  font-weight: 600;
+}
+
+.ion-bottom {
+  text-align: center;
+}
+
+.ion-bottom h2 {
+  margin: 0;
+  color: #0b2f60;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.ion-bottom p {
+  margin: 8px 0 16px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ion-scale {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  gap: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto 16px;
+}
+
+.ion-scale span {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 0;
+}
+
+.ion-scale span:nth-child(1) { background:#ef3b5d; }
+.ion-scale span:nth-child(2) { background:#ee6f3a; }
+.ion-scale span:nth-child(3) { background:#ef9f2a; }
+.ion-scale span:nth-child(4) { background:#dfca37; }
+.ion-scale span:nth-child(5) { background:#afcd43; }
+.ion-scale span:nth-child(6) { background:#82bf45; }
+.ion-scale span:nth-child(7) { background:#62b653; }
+.ion-scale span:nth-child(8) { background:#43ae5f; }
+.ion-scale span:nth-child(9) { background:#2aa98a; }
+.ion-scale span:nth-child(10){ background:#2a9cc2; }
+.ion-scale span:nth-child(11){ background:#2b7dc2; }
+.ion-scale span:nth-child(12){ background:#3558a8; }
+.ion-scale span:nth-child(13){ background:#4b4b9d; }
+.ion-scale span:nth-child(14){ background:#5d3f95; }
+.ion-scale span:nth-child(15){ background:#56388e; }
+
+.ion-bottom h3 {
+  margin: 0;
+  color: #0b2f60;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.ion-ph {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #111827;
+}
+
+@media (max-width: 1200px) {
+  .ion-model-title { font-size: 26px; }
+  .ion-spec-table th, .ion-spec-table td { font-size: 14px; }
+  .ion-bottom h2 { font-size: 22px; }
+  .ion-bottom p { font-size: 15px; }
+  .ion-scale span { font-size: 13px; }
+  .ion-bottom h3 { font-size: 34px; }
+  .ion-ph { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+  .ion-model-title { font-size: 22px; }
+  .ion-spec-table th, .ion-spec-table td {
+    font-size: 13px;
+    padding: 10px 6px;
+  }
+  .ion-bottom h2 { font-size: 20px; }
+  .ion-bottom p { font-size: 14px; }
+  .ion-scale span { font-size: 12px; padding: 5px 0; }
+  .ion-bottom h3 { font-size: 28px; }
+  .ion-ph { font-size: 15px; }
+}
+
+/* ATM HERO */
+.atm-hero {
+  background: linear-gradient(rgba(255,255,255,0.68), rgba(255,255,255,0.75)),
+              url("../images/water.png") center/cover no-repeat;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.atm-hero-inner h1 {
+  margin: 0;
+  color: #1d232f;
+  font-size: 84px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .atm-hero {
+    min-height: 180px;
+  }
+
+  .atm-hero-inner h1 {
+    font-size: 42px;
+  }
 }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RETTO 7 - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Ionizer &gt; RETTO 7
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/RETTO 7.jpeg" alt="RETTO 7" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/RETTO 7.jpeg" alt="RETTO 7 thumb 1" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/RETTO 7.jpeg" alt="RETTO 7 thumb 2" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/RETTO 7.jpeg" alt="RETTO 7 thumb 3" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/RETTO 7.jpeg" alt="RETTO 7 thumb 4" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="ion-model-title">MODEL: RETTO 7</h1>
+
+          <table class="ion-spec-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Specifications</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>MACHINE DIMENSION</td><td>31.5 x 15 x 37.5 cm</td></tr>
+              <tr><td>PLATE</td><td>TITANIUM</td></tr>
+              <tr><td>NO OF PLATES</td><td>7</td></tr>
+              <tr><td>pH RANGE</td><td>4.5pH TO 9.5pH</td></tr>
+              <tr><td>ORP RANGE</td><td>(-300 TO -350)</td></tr>
+              <tr><td>INPUT WATER TDS</td><td>50 TO 150 (PPM)</td></tr>
+            </tbody>
+          </table>
+
+          <div class="ion-bottom">
+            <h2>J1 Retto Machine</h2>
+            <p>Retreat Your Body With</p>
+            <div class="ion-scale">
+              <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+            </div>
+            <h3>6 LEVELS OF WATER</h3>
+            <p class="ion-ph">4.5 | 5.5 | 6.5 | 7.5 | 8.5 | 9.5</p>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

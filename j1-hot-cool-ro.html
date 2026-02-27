@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>J1 HOT & COOL RO - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; J1 HOT & COOL RO
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/HOT AND COLD.jpg"
+              alt="J1 HOT & COOL RO"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/HOT AND COLD.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/HOT AND COLD.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/HOT AND COLD.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/HOT AND COLD.jpg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">J1 HOT & COOL RO</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Hot, Cool & Ambient</li>
+              <li>RO + GAC + CTO + Anti Bacterial PP + Pre Filter</li>
+              <li>Purification Capacity: 10-15 Ltr/Hour</li>
+              <li>Storage: 11.0 Ltr</li>
+              <li>Suitable for homes and small offices</li>
+              <li>Designed for everyday premium water convenience</li>
+            </ul>
+            <h2 class="pd-title">Rs. 25,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Three temperature options: Hot, Cool, and Ambient water from one unit.</li>
+          <li>Multi-stage treatment using RO, GAC, CTO, Anti Bacterial PP, and Pre Filter.</li>
+          <li>Balanced purification output with 10-15 Ltr/Hour capacity.</li>
+          <li>11-liter storage suitable for regular family and office consumption.</li>
+          <li>Designed for quick dispensing and daily convenience in all seasons.</li>
+          <li>Elegant front panel style with easy user operation.</li>
+          <li>Improved taste and odor control through carbon-based filtration stages.</li>
+          <li>Reliable construction for long-term domestic usage.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">J1 Hot & Cool RO</h2>
+
+      <div class="desc-card">
+        <p>
+          J1 Hot & Cool RO is designed for users who need purified water with temperature flexibility throughout the day. With Hot, Cool, and Ambient dispensing, it supports all-season usage for homes and office spaces. The system combines RO with GAC, CTO, Anti Bacterial PP, and pre-filter treatment to improve water quality, taste, and hygiene. Its 10-15 liters per hour purification rate and 11-liter storage make it a practical choice for consistent daily use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

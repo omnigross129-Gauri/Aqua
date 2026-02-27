@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SMART ONE - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; SMART ONE
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/SMART ONE.jpeg"
+              alt="SMART ONE"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/SMART ONE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/SMART ONE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/SMART ONE.jpeg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/SMART ONE.jpeg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">SMART ONE</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Mineral Enhancer</li>
+              <li>RO + UV + UF + Sediment + Carbon + MTDS + Mineral + Pre Filter</li>
+              <li>Purification Capacity: 10-15 Ltr/Hour</li>
+              <li>Storage: 15.0 Ltr</li>
+              <li>Suitable for high daily household usage</li>
+              <li>Designed for consistent output and easy operation</li>
+            </ul>
+            <h2 class="pd-title">Rs. 17,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Mineral enhancer stage supports balanced and better-tasting water.</li>
+          <li>RO + UV + UF purification provides multi-layer contaminant reduction.</li>
+          <li>Sediment and carbon stages improve clarity, taste, and odor control.</li>
+          <li>MTDS support helps maintain desired output water quality.</li>
+          <li>15-liter storage is suitable for larger family daily consumption.</li>
+          <li>10-15 Ltr/Hour purification performance for regular usage cycles.</li>
+          <li>Pre-filter compatibility supports varying source water conditions.</li>
+          <li>Contemporary transparent-front look with user-friendly operation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Smart One</h2>
+
+      <div class="desc-card">
+        <p>
+          Smart One is built for users who need higher storage and dependable multi-stage purification in one compact design. It combines RO, UV, UF, sediment and carbon filtration with MTDS control and mineral enhancement for safe, balanced, and better-tasting drinking water. With 10-15 liters per hour purification capacity and 15-liter storage, Smart One is ideal for larger families and high-usage homes seeking consistent water quality throughout the day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

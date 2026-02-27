@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ELEGANCE - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; ELEGANCE
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/ELEGANCE.jpg"
+              alt="ELEGANCE"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ELEGANCE.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ELEGANCE.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ELEGANCE.jpg" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/ELEGANCE.jpg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">ELEGANCE</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Smart Digital Display</li>
+              <li>RO + UF + Alkaline + Carbon + Sediment + TDS Controller</li>
+              <li>Purification Capacity: 12-15 Ltr/Hour</li>
+              <li>Storage: 9 Liter</li>
+              <li>Suitable for multiple raw water sources</li>
+              <li>User-friendly operation and maintenance</li>
+            </ul>
+            <h2 class="pd-title">Rs. 22,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Advanced purification with RO, UF, and Carbon filtration stages.</li>
+          <li>Alkaline enhancement helps improve taste and balanced water output.</li>
+          <li>Digital display shows purification status and operating indicators.</li>
+          <li>Integrated TDS controller allows better control of output water quality.</li>
+          <li>Designed for reliable day-to-day household and office use.</li>
+          <li>Compact body design with modern aesthetics for kitchen spaces.</li>
+          <li>Optimized purification capacity for medium daily consumption needs.</li>
+          <li>Built with durable components for long-term performance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Elegance</h2>
+
+      <div class="desc-card">
+        <p>
+          Elegance is a premium domestic water purifier built for users who need both performance and modern design. It combines RO, UF, alkaline enhancement, and multi-stage carbon-sediment filtration to improve water quality across different input sources. The smart digital display and integrated TDS controller help users monitor and manage output water quality with ease. With a purification capacity of 12-15 liters per hour and 9-liter storage, Elegance is suitable for families and office spaces seeking consistent and safe drinking water.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

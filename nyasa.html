@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NYASA - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; NYASA
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/NYSAA .png"
+              alt="NYASA"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/NYSAA .png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/NYSAA .png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/NYSAA .png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/NYSAA .png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">NYASA</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Duty Cycle: 75 Liter/Day</li>
+              <li>TDS Display: 0 to 999 ppm</li>
+              <li>Purification Capacity: 15 Liter/Hour</li>
+              <li>Storage: 8 Liter</li>
+              <li>RO Membrane: 90 GPD</li>
+              <li>UF Membrane: 0.1 Micron</li>
+            </ul>
+            <h2 class="pd-title">Rs. 25,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Suitable for all types of supply water like Borewell, Tanker Water, or Municipal water.</li>
+          <li>TDS of purified water can be set digitally by Users.</li>
+          <li>It can be used in Low TDS as well as High TDS of raw water.</li>
+          <li>TDS of purified water display on the front panel.</li>
+          <li>The user gets an accuracy of purified water till +/-10 ppm TDS.</li>
+          <li>LED Indication for purification process i.e. RO/UV/UF on the front panel.</li>
+          <li>Indication for storage tank full and Low pressure on the front panel.</li>
+          <li>TODI Technology gives low rejection of water.</li>
+          <li>Change of raw water TDS doesn't affect the TDS of purified water.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Nyasa</h2>
+
+      <div class="desc-card">
+        <p>
+          Introducing Aqua J1 by Universal Water Purifier, a groundbreaking innovation in water purification technology now available in India. Our advanced water purifier, equipped with the cutting-edge NYASA system, revolutionizes the way water from various sources like borewells, municipal supplies, or tankers is treated. By intelligently selecting the required technology based on the customer's specified minimum and maximum TDS settings, Aqua J1 automatically utilizes UF/UV or RO methods. Incorporating a Microcontroller and TDS Sensor, TODI seamlessly combines RO, UV, and UF technologies to deliver water with the desired TDS levels while preserving essential minerals. The user-friendly display panel presents real-time information on the output water's actual TDS, the purification process currently in use, and provides indicators for low pressure and storage tank fullness. Experience the convenience and purity of water like never before with Aqua J1 by Universal Water Purifier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

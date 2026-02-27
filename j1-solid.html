@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>J1 SOLID - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Domestic &gt; J1 SOLID
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/product-page1.png"
+              alt="J1 SOLID"
+            />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/product-page1.png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/product-page1.png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/product-page1.png" alt="" />
+            </button>
+            <button class="pd-thumb" type="button" data-img="assets/images/product-page1.png">
+              <img src="assets/images/product-page1.png" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">J1 SOLID</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">SPECIFICATION</div>
+            <ul class="pd-features">
+              <li>Special Features: Highly Durable SS Body</li>
+              <li>RO + UV + Sediment + Carbon + UF + MTDS + Min + Alkaline + Pre Filter</li>
+              <li>Purification Capacity: 10-15 Ltr/Hour</li>
+              <li>Storage: 10.0 Ltr</li>
+              <li>Suitable for homes and commercial spaces</li>
+              <li>Designed for long-life daily operation</li>
+            </ul>
+            <h2 class="pd-title">Rs. 27,000 /-</h2>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Features</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Premium stainless steel body provides strong structural durability.</li>
+          <li>RO + UV + UF purification with sediment and carbon filtration stages.</li>
+          <li>MTDS and mineral balancing support better-tasting output water.</li>
+          <li>Alkaline enhancement stage for improved drinking water profile.</li>
+          <li>10-15 Ltr/Hour purification capacity for regular daily demand.</li>
+          <li>10-liter storage for convenient usage across household routines.</li>
+          <li>Suitable for varied raw water input conditions with pre-filter support.</li>
+          <li>Built for consistent, long-term performance with low maintenance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">J1 Solid</h2>
+
+      <div class="desc-card">
+        <p>
+          J1 Solid is engineered for users who need a robust purifier with premium SS construction and dependable day-to-day performance. It combines RO, UV, UF, sediment and carbon stages with MTDS, mineral balancing, and alkaline enhancement to support safe and better-tasting drinking water. With a purification capacity of 10-15 liters per hour and 10-liter storage, the model is suitable for both homes and commercial settings requiring durability and consistency.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
