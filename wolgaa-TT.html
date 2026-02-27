@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wolgaa-TT - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <!-- Breadcrumb -->
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Wolgaa &gt; Wolgaa-TT
+      </div>
+
+      <div class="pd-top">
+
+        <!-- LEFT: Gallery -->
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img
+              id="mainProductImg"
+              src="assets/images/Wolgaa - TT.png"
+              alt="Wolgaa-TT"
+            />
+          </div>
+
+          <!-- If only one image, repeat -->
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/wolgaa/wolgaa-tt/main.png">
+              <img src="assets/images/Wolgaa - TT.png" alt="">
+            </button>
+
+            <button class="pd-thumb" type="button" data-img="assets/images/wolgaa/wolgaa-tt/main.png">
+              <img src="assets/images/Wolgaa - TT.png" alt="">
+            </button>
+
+            <button class="pd-thumb" type="button" data-img="assets/images/wolgaa/wolgaa-tt/main.png">
+              <img src="assets/images/Wolgaa - TT.png" alt="">
+            </button>
+
+            <button class="pd-thumb" type="button" data-img="assets/images/wolgaa/wolgaa-tt/main.png">
+              <img src="assets/images/Wolgaa - TT.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <!-- RIGHT: Details -->
+        <div class="pd-details">
+          <h1 class="pd-title">Wolgaa-TT</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">OVERVIEW</div>
+            <ul class="pd-features">
+              <li>Hot / Normal / Cold Water Dispensing</li>
+              <li>Compact Table-Top Design</li>
+              <li>Space-Saving & Easy Installation</li>
+              <li>Reliable Cooling & Heating Performance</li>
+              <li>Ideal for Homes, Offices & Small Workspaces</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Description -->
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>3-tap output provides Hot, Normal, and Cold water options</li>
+          <li>Compact table-top design ideal for limited spaces</li>
+          <li>Efficient cooling system delivers chilled water consistently</li>
+          <li>Stable heating system suitable for daily usage</li>
+          <li>Simple plug-and-play installation with standard 230V supply</li>
+          <li>LED indicators display heating, cooling, and power status</li>
+          <li>Durable body construction for long-term performance</li>
+          <li>Perfect for small offices, clinics, homes, and workstations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications -->
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <div class="spec-grid">
+
+        <div class="spec-item">
+          <span class="spec-label">Functions</span>
+          <span class="spec-value">Hot / Normal / Cold</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Number of Taps</span>
+          <span class="spec-value">3</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Cold Tank Capacity</span>
+          <span class="spec-value">~3.5 Litres</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Cooling Capacity</span>
+          <span class="spec-value">~2–3 Litres/hour</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Heating Capacity</span>
+          <span class="spec-value">~5 Litres/hour</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Power Source</span>
+          <span class="spec-value">230V / 1 Phase / 50Hz</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Refrigerant</span>
+          <span class="spec-value">R-134A</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Design Type</span>
+          <span class="spec-value">Table-Top</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Colour</span>
+          <span class="spec-value">White</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="spec-label">Warranty</span>
+          <span class="spec-value">1 Year (Technical Parts)</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
