@@ -19,7 +19,11 @@
 
 </head>
 <body>
+  <div id="top"></div>
+
     <div id="navbar"></div>
+    <br>
+  <br>
 
    <section class="precision-section">
   <div class="precision-container">
@@ -54,47 +58,47 @@
           Please provide additional details to proceed
         </p>
 
-        <form>
+        <form action="submit-form.php" method="POST">
 
-          <div class="form-group">
-            <label>Name <span>*</span></label>
-            <input type="text" placeholder="Name">
-          </div>
+  <div class="form-group">
+    <label>Name <span>*</span></label>
+    <input type="text" name="name" placeholder="Name" required>
+  </div>
 
-          <div class="form-group">
-            <label>Pin code <span>*</span></label>
-            <input type="text" placeholder="Pin Code">
-          </div>
+  <div class="form-group">
+    <label>Pin code <span>*</span></label>
+    <input type="text" name="pincode" placeholder="Pin Code" required>
+  </div>
 
-          <div class="form-group">
-            <label>Mobile Number <span>*</span></label>
-            <input type="text" placeholder="Mobile">
-          </div>
+  <div class="form-group">
+    <label>Mobile Number <span>*</span></label>
+    <input type="text" name="mobile" placeholder="Mobile" required>
+  </div>
 
-          <div class="form-group">
-            <label>Email Address <span>*</span></label>
-            <input type="email" placeholder="Email">
-          </div>
+  <div class="form-group">
+    <label>Email Address <span>*</span></label>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
 
-          <div class="form-group">
-            <label>Please select the water purifier <span>*</span></label>
-            <select>
-              <option>Search Products</option>
-              <option>ZICO Copper</option>
-              <option>Eric</option>
-              <option>Hot and Cold</option>
-              <option>Nyasa</option>
-            </select>
-          </div>
+  <div class="form-group">
+    <label>Please select the water purifier <span>*</span></label>
+    <select name="product" required>
+      <option value="">Select Product</option>
+      <option>ZICO Copper</option>
+      <option>Eric</option>
+      <option>Hot and Cold</option>
+      <option>Nyasa</option>
+    </select>
+  </div>
 
-          <div class="form-submit">
-  <button type="submit" class="btn-submit">
-    Submit Request
-  </button>
-</div>
+  <div class="form-submit">
+    <button type="submit" class="btn-submit">
+      Submit Request
+    </button>
+  </div>
 
+</form>
 
-        </form>
 
       </div>
 
@@ -108,6 +112,15 @@
 
 
      <div id="footer"></div>
+     <div class="nr-float">
+  <a class="nr-float-btn nr-float-top" href="#top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <a class="nr-float-btn nr-float-wa" href="https://wa.me/91XXXXXXXXXX" target="_blank" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</div>
 
      </body>
 
