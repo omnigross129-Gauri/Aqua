@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Softener C-2020AD | C-4545AD - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Softener C-2020AD | C-4545AD
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/C2020AD.jpeg" alt="Softener C-2020AD | C-4545AD" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/C2020AD.jpeg"><img src="assets/images/C2020AD.jpeg" alt="Softener C-2020AD | C-4545AD thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/C2020AD.jpeg"><img src="assets/images/C2020AD.jpeg" alt="Softener C-2020AD | C-4545AD thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/C2020AD.jpeg"><img src="assets/images/C2020AD.jpeg" alt="Softener C-2020AD | C-4545AD thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/C2020AD.jpeg"><img src="assets/images/C2020AD.jpeg" alt="Softener C-2020AD | C-4545AD thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Softener C-2020AD | C-4545AD</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Easy to install and ready to use.</li>
+              <li>Elegant designed, cabinet type water softener.</li>
+              <li>Fully automatic microprocessor-controlling operation.</li>
+              <li>Automatic OBR calculation and settings.</li>
+              <li>Display current time, remaining soft water and current flow.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Dual variant model with compact and high-capacity options.</li>
+          <li>Cabinet design suitable for residential and light commercial use.</li>
+          <li>Automated operation with display-assisted control.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <table class="ion-spec-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>C-20/20-AD</th>
+            <th>C-45/45-AD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Max. Flow Rate</td><td>1200 Lph</td><td>2000 Lph</td></tr>
+          <tr><td>OBSA (Basis on 200ppm)</td><td>22500 Ltr</td><td>45000 Ltr</td></tr>
+          <tr><td>OBR (Basis on 200 ppm)</td><td>3750 Ltr</td><td>7500 Ltr</td></tr>
+          <tr><td>Resin Tank Volume</td><td>18 Ltr</td><td>38 Ltr</td></tr>
+          <tr><td>Resin Quantity</td><td>15 Ltr</td><td>30 Ltr</td></tr>
+          <tr><td>Salt Tank Volume</td><td>22 Ltr</td><td>55 Ltr</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

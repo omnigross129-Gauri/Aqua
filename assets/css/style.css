@@ -6298,3 +6298,77 @@ body {
     font-size: 42px;
   }
 }
+
+/* SOFTENER DETAIL BLOCKS */
+.sf-title {
+  margin: 0 0 8px;
+  color: #0b2f60;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.sf-subtitle {
+  margin: 10px 0 8px;
+  color: #0b2f60;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.sf-list {
+  margin: 0 0 8px;
+  padding-left: 20px;
+  color: #3f4c63;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.sf-list li {
+  margin-bottom: 4px;
+}
+
+.sf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.sf-table th,
+.sf-table td {
+  padding: 11px 12px;
+  border-bottom: 1px solid #d7dee8;
+  text-align: left;
+  vertical-align: top;
+  font-size: 15px;
+  color: #111827;
+}
+
+.sf-table th {
+  background: #c7d0d9;
+  font-weight: 700;
+}
+
+.sf-table td {
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .sf-title {
+    font-size: 24px;
+  }
+
+  .sf-subtitle {
+    font-size: 18px;
+  }
+
+  .sf-list {
+    font-size: 15px;
+  }
+
+  .sf-table th,
+  .sf-table td {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+}

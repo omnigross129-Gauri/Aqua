@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Twin Tank Softener - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Twin Tank Softener
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/Twink Tank Softneer.jpeg" alt="Twin Tank Softener" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/Twink Tank Softneer.jpeg"><img src="assets/images/Twink Tank Softneer.jpeg" alt="Twin Tank Softener thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/Twink Tank Softneer.jpeg"><img src="assets/images/Twink Tank Softneer.jpeg" alt="Twin Tank Softener thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/Twink Tank Softneer.jpeg"><img src="assets/images/Twink Tank Softneer.jpeg" alt="Twin Tank Softener thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/Twink Tank Softneer.jpeg"><img src="assets/images/Twink Tank Softneer.jpeg" alt="Twin Tank Softener thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Twin Tank Softener</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Fully automatic microprocessor-controlling operation.</li>
+              <li>One working and one standby resin tank for 24x365 continuous soft water supply.</li>
+              <li>Specially design three way ceramic core ball valve fixed at outlet of both tanks.</li>
+              <li>Display current time, remaining soft water and current flow.</li>
+              <li>Brine tank with brine valve, brine well and perforated disk.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Twin tank architecture ensures non-stop soft water output.</li>
+          <li>Designed for high-demand installations requiring redundancy.</li>
+          <li>Automation-ready control for continuous duty operation.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <div class="spec-grid">
+        <div class="spec-item"><span class="spec-label">Max. Flow Rate</span><span class="spec-value">9000 Lph</span></div>
+        <div class="spec-item"><span class="spec-label">OBSA (Basis on 200ppm)</span><span class="spec-value">1350000 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">OBR (Basis on 200 ppm)</span><span class="spec-value">450000 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Resin Tank Volume</span><span class="spec-value">1000+1000 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Resin Quantity</span><span class="spec-value">1800 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Salt Tank Volume</span><span class="spec-value">2000 Ltr</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

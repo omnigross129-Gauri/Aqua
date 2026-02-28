@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Softener with sand filter - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Softener with sand filter
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/auatomatic softner with sand filter.jpeg" alt="Softener with sand filter" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/auatomatic softner with sand filter.jpeg"><img src="assets/images/auatomatic softner with sand filter.jpeg" alt="Softener with sand filter thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/auatomatic softner with sand filter.jpeg"><img src="assets/images/auatomatic softner with sand filter.jpeg" alt="Softener with sand filter thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/auatomatic softner with sand filter.jpeg"><img src="assets/images/auatomatic softner with sand filter.jpeg" alt="Softener with sand filter thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/auatomatic softner with sand filter.jpeg"><img src="assets/images/auatomatic softner with sand filter.jpeg" alt="Softener with sand filter thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Softener with sand filter</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Fully automatic microprocessor-controlling operation.</li>
+              <li>Display current time, remaining soft water and current flow.</li>
+              <li>Brine tank with brine valve, brine well and perforated disk.</li>
+              <li>Incorporated with pressure relief SV and sampling valve.</li>
+              <li>R Series MPV with big display.</li>
+              <li>E(O) Series MPV with small display.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Multi-model sand filter and softener combination system.</li>
+          <li>Available in R and E series options for flow flexibility.</li>
+          <li>Designed for robust daily operation in larger installations.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <table class="ion-spec-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>100R BFT</th>
+            <th>100E BFT</th>
+            <th>150R BFT</th>
+            <th>150E BFT</th>
+            <th>200R BFT</th>
+            <th>200E BFT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Max. Flow Rate</td><td>3000 Lph</td><td>3500 Lph</td><td>3000 Lph</td><td>3500 Lph</td><td>3000 Lph</td><td>3500 Lph</td></tr>
+          <tr><td>OBSA (Basis on 200ppm)</td><td>75000 Ltr</td><td>75000 Ltr</td><td>156250 Ltr</td><td>156250 Ltr</td><td>131250 Ltr</td><td>131250 Ltr</td></tr>
+          <tr><td>OBR (Basis on 200 ppm)</td><td>18750 Ltr</td><td>18750 Ltr</td><td>31250 Ltr</td><td>31250 Ltr</td><td>43750 Ltr</td><td>43750 Ltr</td></tr>
+          <tr><td>Sand Resin Tank Volume</td><td>103 Ltr</td><td>103 Ltr</td><td>145 Ltr</td><td>145 Ltr</td><td>185 Ltr</td><td>185 Ltr</td></tr>
+          <tr><td>Sand Quantity</td><td>60 Ltr</td><td>60 Ltr</td><td>90 Ltr</td><td>90 Ltr</td><td>115 Ltr</td><td>115 Ltr</td></tr>
+          <tr><td>Resin Quantity</td><td>75 Ltr</td><td>75 Ltr</td><td>125 Ltr</td><td>125 Ltr</td><td>175 Ltr</td><td>175 Ltr</td></tr>
+          <tr><td>Salt Tank Volume</td><td>100 Ltr</td><td>100 Ltr</td><td>200 Ltr</td><td>200 Ltr</td><td>200 Ltr</td><td>200 Ltr</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

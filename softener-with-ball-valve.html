@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Softener with Ball Valve - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Softener with Ball Valve
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/SOFTENER WITH BALL VALVE.jpeg" alt="Softener with Ball Valve" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/SOFTENER WITH BALL VALVE.jpeg"><img src="assets/images/SOFTENER WITH BALL VALVE.jpeg" alt="Softener with Ball Valve thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/SOFTENER WITH BALL VALVE.jpeg"><img src="assets/images/SOFTENER WITH BALL VALVE.jpeg" alt="Softener with Ball Valve thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/SOFTENER WITH BALL VALVE.jpeg"><img src="assets/images/SOFTENER WITH BALL VALVE.jpeg" alt="Softener with Ball Valve thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/SOFTENER WITH BALL VALVE.jpeg"><img src="assets/images/SOFTENER WITH BALL VALVE.jpeg" alt="Softener with Ball Valve thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Softener with Ball Valve</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Can be easily install on wall and ready to use.</li>
+              <li>Inbuilt brine tank with salt perforated bottom plate.</li>
+              <li>No need to fill water manually in salt tank.</li>
+              <li>Electricity not require.</li>
+              <li>Can be used for bathroom, washing machine and dish washer.</li>
+              <li>Incorporated with pressure relief SV and sampling valve.</li>
+              <li>Can be used before and after soft water storage tank.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Heavy-duty softening setup with manual valve architecture.</li>
+          <li>Intended for locations requiring reliable non-electric operation.</li>
+          <li>Supports high flow operations in utility and process applications.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <table class="ion-spec-table">
+        <thead>
+          <tr>
+            <th>Flow</th>
+            <th>Main Ball valve(5 NOS)</th>
+            <th>Brain Ball Valve(2 NOS)</th>
+            <th>Piping Size</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>80 M<sup>3</sup>/h</td><td>DN-65</td><td>DN-32</td><td>DN-80</td></tr>
+          <tr><td>150 M<sup>3</sup>/h</td><td>DN-80</td><td>DN-40</td><td>DN-100</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

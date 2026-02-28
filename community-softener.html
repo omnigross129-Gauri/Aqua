@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Softener - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Community Softener
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/COMMUNITY SOFTNER 300 R.jpeg" alt="Community Softener" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/COMMUNITY SOFTNER 300 R.jpeg"><img src="assets/images/COMMUNITY SOFTNER 300 R.jpeg" alt="Community Softener thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/COMMUNITY SOFTNER 300 R.jpeg"><img src="assets/images/COMMUNITY SOFTNER 300 R.jpeg" alt="Community Softener thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/COMMUNITY SOFTNER 300 R.jpeg"><img src="assets/images/COMMUNITY SOFTNER 300 R.jpeg" alt="Community Softener thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/COMMUNITY SOFTNER 300 R.jpeg"><img src="assets/images/COMMUNITY SOFTNER 300 R.jpeg" alt="Community Softener thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Community Softener</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Brine tank with brine valve, brine well and perforated disk.</li>
+              <li>R Series MPV with big display.</li>
+              <li>Can be used before and after soft water storage tank.</li>
+              <li>Fully automatic microprocessor-controlling operation.</li>
+              <li>Display current time, remaining soft water and current flow.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Community-scale softening system with multiple capacity options.</li>
+          <li>Built for continuous operation across larger water demand cycles.</li>
+          <li>Suitable for institutions, apartments and group housing.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <table class="ion-spec-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>300R</th>
+            <th>500R</th>
+            <th>700R</th>
+            <th>1000R</th>
+            <th>2000R</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Max. Flow Rate</td><td>9000 Lph</td><td>9000 Lph</td><td>9000 Lph</td><td>9000 Lph</td><td>9000 Lph</td></tr>
+          <tr><td>OBSA (Basis on 200ppm)</td><td>343750 Ltr</td><td>318750 Ltr</td><td>812500 Ltr</td><td>675000 Ltr</td><td>1350000 Ltr</td></tr>
+          <tr><td>OBR (Basis on 200 ppm)</td><td>68750 Ltr</td><td>106250 Ltr</td><td>162500 Ltr</td><td>225000 Ltr</td><td>450000 Ltr</td></tr>
+          <tr><td>Resin Tank Volume</td><td>310 Ltr</td><td>450 Ltr</td><td>700 Ltr</td><td>1000 Ltr</td><td>1890 Ltr</td></tr>
+          <tr><td>Resin Quantity</td><td>275 Ltr</td><td>425 Ltr</td><td>650 Ltr</td><td>900 Ltr</td><td>1800 Ltr</td></tr>
+          <tr><td>Salt Tank Volume</td><td>500 Ltr</td><td>500 Ltr</td><td>1000 Ltr</td><td>1000 Ltr</td><td>2000 Ltr</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

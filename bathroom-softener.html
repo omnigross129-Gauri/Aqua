@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bathroom Softener - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@1,700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="navbar"></div>
+
+  <section class="pd-page">
+    <div class="pd-wrap">
+
+      <div class="pd-breadcrumb">
+        Home &gt; Products &gt; Softener &gt; Bathroom Softener
+      </div>
+
+      <div class="pd-top">
+
+        <div class="pd-gallery">
+          <div class="pd-main-img">
+            <img id="mainProductImg" src="assets/images/BATHROOM SOFTNER.jpeg" alt="Bathroom Softener" />
+          </div>
+
+          <div class="pd-thumbs">
+            <button class="pd-thumb active" type="button" data-img="assets/images/BATHROOM SOFTNER.jpeg"><img src="assets/images/BATHROOM SOFTNER.jpeg" alt="Bathroom Softener thumb 1" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/BATHROOM SOFTNER.jpeg"><img src="assets/images/BATHROOM SOFTNER.jpeg" alt="Bathroom Softener thumb 2" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/BATHROOM SOFTNER.jpeg"><img src="assets/images/BATHROOM SOFTNER.jpeg" alt="Bathroom Softener thumb 3" /></button>
+            <button class="pd-thumb" type="button" data-img="assets/images/BATHROOM SOFTNER.jpeg"><img src="assets/images/BATHROOM SOFTNER.jpeg" alt="Bathroom Softener thumb 4" /></button>
+          </div>
+        </div>
+
+        <div class="pd-details">
+          <h1 class="pd-title">Bathroom Softener</h1>
+
+          <div class="pd-section">
+            <div class="pd-section-title">UNIQUE FEATURES</div>
+            <ul class="pd-features">
+              <li>Elegant designed, cabinet type water softener.</li>
+              <li>Fully automatic microprocessor-controlling operation.</li>
+              <li>Can be easily install on wall and ready to use.</li>
+              <li>Automatic OBR calculation and settings.</li>
+              <li>Alarm-time to add salt.</li>
+            </ul>
+          </div>
+
+          <div class="pd-actions">
+            <a class="pd-btn pd-btn-outline" href="contact.html">Enquire Now</a>
+            <a class="pd-btn pd-btn-fill" href="book-demo.html">Book Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="desc-section">
+    <div class="desc-container">
+      <h2 class="desc-title">Description</h2>
+
+      <div class="desc-card">
+        <ul class="desc-list">
+          <li>Wall-mount compact model for bathroom line softening.</li>
+          <li>Automatic cycle control with low-maintenance operation.</li>
+          <li>Ideal for apartment and small-family usage.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="spec-section">
+    <div class="spec-container">
+      <h2 class="spec-title">Technical Specifications</h2>
+
+      <div class="spec-grid">
+        <div class="spec-item"><span class="spec-label">Max. Flow Rate</span><span class="spec-value">600 Lph</span></div>
+        <div class="spec-item"><span class="spec-label">OBSA (Basis on 200ppm)</span><span class="spec-value">8400 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">OBR (Basis on 200 ppm)</span><span class="spec-value">1200 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Resin Tank Volume</span><span class="spec-value">6 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Resin Quantity</span><span class="spec-value">4.8 Ltr</span></div>
+        <div class="spec-item"><span class="spec-label">Salt Tank Volume</span><span class="spec-value">8 Ltr</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/main.js"></script>
+  <script>
+    (function () {
+      const mainImg = document.getElementById("mainProductImg");
+      const thumbBtns = document.querySelectorAll(".pd-thumb");
+
+      thumbBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const img = btn.getAttribute("data-img");
+          if (img) mainImg.src = img;
+
+          thumbBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
