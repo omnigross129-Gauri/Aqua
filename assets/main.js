@@ -480,9 +480,9 @@ document.addEventListener("DOMContentLoaded", () => {
   loadComponent("navbar", "compontents/navbar.html", initNavbar);
 loadComponent("footer", "compontents/footer.html");
 
-
 });
 
+});
 
 
 const networkCounters = document.querySelectorAll(".network-counter");
@@ -519,12 +519,7 @@ const networkObserver = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.4 });
 
-const networkSection = document.querySelector(".network-section");
-
-if (networkSection) {
-  networkObserver.observe(networkSection);
-}
-
+networkObserver.observe(document.querySelector(".network-section"));
 
 
 
@@ -536,8 +531,6 @@ function startCounting() {
   if (started) return;
 
   const section = document.querySelector(".stats-section");
-  if (!section) return; // safety check
-
   const sectionTop = section.getBoundingClientRect().top;
 
   if (sectionTop < window.innerHeight - 100) {
@@ -566,6 +559,3 @@ function startCounting() {
 }
 
 window.addEventListener("scroll", startCounting);
-
-
-
