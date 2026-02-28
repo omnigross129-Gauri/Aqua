@@ -482,6 +482,7 @@ loadComponent("footer", "compontents/footer.html");
 
 });
 
+});
 
 
 const networkCounters = document.querySelectorAll(".network-counter");
